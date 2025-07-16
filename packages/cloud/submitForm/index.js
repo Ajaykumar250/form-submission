@@ -8,25 +8,31 @@ async function main(args) {
 
     try {
         await client.connect();
-        const db = client.db("form-submission"); // your actual DB name
+        const db = client.db("form-submission");
         const collection = db.collection("submissions");
 
         const { name, email, gender } = args;
 
         if (!name || !email || !gender) {
-            return { statusCode: 400, body: "Missing name, email, or gender" };
+            return {
+                statusCode: 400,
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: "Missing name, email, or gender" })
+            };
         }
 
         await collection.insertOne({ name, email, gender });
 
         return {
             statusCode: 200,
-            body: `Thank you, ${name} for submitting details.`
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: `Thank you, ${name} for submitting details.` })
         };
     } catch (err) {
         return {
             statusCode: 500,
-            body: "Server error: " + err.message
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: "Server error: " + err.message })
         };
     } finally {
         await client.close();
