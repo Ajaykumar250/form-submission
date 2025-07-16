@@ -1,0 +1,9 @@
+{
+  "name": "submitform",
+  "version": "1.0.0",
+  "description": "Function to store user form data",
+  "main": "index.js",
+  "dependencies": {
+    "mongodb": "^5.9.2"
+  }
+}

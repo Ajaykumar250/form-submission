@@ -1,0 +1,18 @@
+[
+  {
+    "apihost": "https://faas-blr1-8177d592.doserverless.co",
+    "namespace": "fn-0834befb-5367-4469-ac13-070bae40c383",
+    "packageVersions": {
+      "cloud": {
+        "version": "0.0.5",
+        "digest": "b65a168b50d28998b4518765a2421fe2a10d2ede8d3e3c5044b426f4dd1094b5"
+      }
+    },
+    "actionVersions": {
+      "cloud/submitForm": {
+        "version": "0.0.1",
+        "digest": "cc6f991f4b6b2f007b1b24bf81f44225a696a548ac9b95170dd51269b98ef02c"
+      }
+    }
+  }
+]
