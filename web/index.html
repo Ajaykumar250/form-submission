@@ -6,15 +6,16 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-<body style="background-image: url('ocean-bg.jpg'); background-size: cover; background-position: center; min-height: 100vh;">
+<body>
+  <div class="bubbles"></div>
 
-  <header class="header">
+  <header>
     <img src="logo-do.png" alt="DigitalOcean Logo" class="logo" />
     <h1>Sign Up</h1>
   </header>
 
-  <main class="form-container">
-    <form id="contactForm" class="form-card">
+  <div class="form-container">
+    <form id="contactForm">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />
 
@@ -23,19 +24,16 @@
 
       <label>Gender:</label>
       <div class="gender-options">
-        <input type="radio" id="male" name="gender" value="Male" required />
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="Female" />
-        <label for="female">Female</label>
+        <label><input type="radio" name="gender" value="Male" required /> Male</label>
+        <label><input type="radio" name="gender" value="Female" required /> Female</label>
       </div>
 
       <button type="submit">Sign Up</button>
     </form>
     <p id="message"></p>
-  </main>
+  </div>
 
-  <footer class="footer">🌊 Developed by Ajay</footer>
-
+  <footer>🛠️ Developed by Ajay</footer>
   <script src="script.js"></script>
 </body>
 </html>
