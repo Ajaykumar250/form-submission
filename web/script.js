@@ -6,10 +6,20 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   try {
     const response = await axios.post("/api/cloud/submitForm", { name, email });
-    const message = response.data.message || "Submission successful";
+
+    let message;
+    if (typeof response.data === "string") {
+      // If server returned a plain string
+      message = response.data;
+    } else {
+      // If server returned a JSON object with a message property
+      message = response.data.message || "Submission successful";
+    }
+
     document.getElementById("message").innerText = `✅ ${message}`;
+    document.getElementById("contactForm").reset(); // Clear form after success
   } catch (err) {
-    document.getElementById("message").innerText = "❌ Submission failed.";
     console.error("Form submission error:", err);
+    document.getElementById("message").innerText = "❌ Submission failed. Please try again.";
   }
 });
