@@ -2,29 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Form Submission</title>
+  <title>Sign up</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-<body>
-  <header>
-    <img src="logo-do.png" alt="DigitalOcean Logo" id="logo" />
-    <h1>User Form</h1>
-  </header>
+<body style="background-image: url('ocean-bg.jpg');">
+  <div class="container">
+    <div class="form-box">
+      <img src="logo-do.png" alt="DO Logo" class="logo" />
+      <h1>Sign up</h1>
+      <p class="subtext">Sign up to continue</p>
 
-  <div class="form-container">
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
-      <button type="submit">Submit</button>
-    </form>
-    <p id="message"></p>
+        <label>Gender</label>
+        <div class="gender-options">
+          <label><input type="radio" name="gender" value="Male" required /> Male</label>
+          <label><input type="radio" name="gender" value="Female" /> Female</label>
+        </div>
+
+        <button type="submit">Sign up</button>
+        <p id="message"></p>
+      </form>
+
+      <footer>Developed by Ajay</footer>
+    </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

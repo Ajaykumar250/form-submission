@@ -1,67 +1,92 @@
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('ocean-bg.jpg');
   background-size: cover;
   background-position: center;
-  margin: 0;
-  padding: 0;
-  color: #fff;
+  color: #0033cc;
 }
 
-header {
-  background-color: rgba(0, 123, 255, 0.85); /* DO blue */
-  padding: 1rem 2rem;
+.container {
   display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-#logo {
-  height: 40px;
-  margin-right: 1rem;
+.form-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 1rem;
 }
 
 h1 {
+  margin-bottom: 0.2rem;
   font-size: 1.8rem;
-  margin: 0;
 }
 
-.form-container {
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #222;
-  margin: 4rem auto;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.subtext {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  text-align: left;
 }
 
 label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
   font-weight: bold;
-  color: #0366d6;
 }
 
-input {
+input[type="text"],
+input[type="email"] {
   width: 100%;
   padding: 0.6rem;
-  margin: 0.5rem 0 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
+.gender-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
 button {
-  background-color: #007bff;
-  color: white;
-  padding: 0.6rem 1.2rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #0061ff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #004dcc;
 }
 
 #message {
   margin-top: 1rem;
   font-weight: bold;
+}
+
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #333;
 }

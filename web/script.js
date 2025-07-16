@@ -3,23 +3,14 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
 
   try {
-    const response = await axios.post("/api/cloud/submitForm", { name, email });
-
-    let message;
-    if (typeof response.data === "string") {
-      // If server returned a plain string
-      message = response.data;
-    } else {
-      // If server returned a JSON object with a message property
-      message = response.data.message || "Submission successful";
-    }
-
+    const response = await axios.post("/api/cloud/submitForm", { name, email, gender });
+    const message = response.data.message || "Submission successful";
     document.getElementById("message").innerText = `✅ ${message}`;
-    document.getElementById("contactForm").reset(); // Clear form after success
   } catch (err) {
+    document.getElementById("message").innerText = "❌ Submission failed.";
     console.error("Form submission error:", err);
-    document.getElementById("message").innerText = "❌ Submission failed. Please try again.";
   }
 });
