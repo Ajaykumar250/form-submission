@@ -1,63 +1,67 @@
 body {
   font-family: 'Segoe UI', sans-serif;
+  background-image: url('ocean-bg.jpg');
+  background-size: cover;
+  background-position: center;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-  color: #0069ff;
+  color: #fff;
 }
 
 header {
+  background-color: rgba(0, 123, 255, 0.85); /* DO blue */
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  background-color: #0069ff;
-  color: white;
-  padding: 1rem 2rem;
 }
 
-.logo {
+#logo {
   height: 40px;
   margin-right: 1rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 
-main {
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
+.form-container {
+  max-width: 500px;
   background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  margin: 4rem auto;
+  padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 105, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  font-weight: bold;
+  color: #0366d6;
 }
 
 input {
   width: 100%;
-  margin: 1rem 0;
-  padding: 0.5rem;
-  border: 1px solid #cfd8dc;
+  padding: 0.6rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
 }
 
 button {
-  background-color: #0069ff;
+  background-color: #007bff;
   color: white;
+  padding: 0.6rem 1.2rem;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0052cc;
+  background-color: #0056b3;
 }
 
 #message {
   margin-top: 1rem;
   font-weight: bold;
-  font-size: 1.2rem;
 }
